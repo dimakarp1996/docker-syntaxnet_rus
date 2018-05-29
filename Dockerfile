@@ -81,22 +81,22 @@ ENV LANG ru_RU.UTF-8
 
 # Downloading and unpacking model for Russian
 
-ADD http://download.tensorflow.org/models/parsey_universal/Russian-SynTagRus.zip /root/models/syntaxnet/syntaxnet/models
-RUN unzip /root/models/syntaxnet/syntaxnet/models/Russian-SynTagRus.zip -d /root/models/syntaxnet/syntaxnet/models/
+ADD http://download.tensorflow.org/models/parsey_universal/Russian-SynTagRus.zip /root/models/research/syntaxnet/syntaxnet/models
+RUN unzip /root/models/research/syntaxnet/syntaxnet/models/Russian-SynTagRus.zip -d /root/models/research/syntaxnet/syntaxnet/models/
 
 
 # Misk
 
-COPY demo_rus.sh /root/models/syntaxnet/syntaxnet/
+COPY demo_rus.sh /root/models/research/syntaxnet/syntaxnet/
 COPY server /usr/bin/
 
 # Standalone server
 
-COPY api /root/models/syntaxnet/bazel-bin/syntaxnet/parser_eval.runfiles/__main__/syntaxnet/api/
+COPY api /root/models/research/syntaxnet/bazel-bin/syntaxnet/parser_eval.runfiles/__main__/syntaxnet/api/
 
 ######################################
 
-WORKDIR /root/models/syntaxnet/
+WORKDIR /root/models/research/syntaxnet/
 
-CMD /root/models/syntaxnet/syntaxnet/demo_rus.sh
+CMD /root/models/research/syntaxnet/syntaxnet/demo_rus.sh
 
