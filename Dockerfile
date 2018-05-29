@@ -61,7 +61,7 @@ RUN pip install asciitree mock
 # Download and build Syntaxnet
 
 RUN git clone --recursive https://github.com/tensorflow/models.git /root/models
-RUN cd /root/models/syntaxnet/tensorflow && tensorflow/tools/ci_build/builds/configured CPU
+#RUN cd /root/models/syntaxnet/tensorflow && tensorflow/tools/ci_build/builds/configured CPU
 RUN cd /root/models/syntaxnet && bazel build -c opt @org_tensorflow//tensorflow:tensorflow_py
 RUN cd /root/models/syntaxnet && bazel build syntaxnet/...
 
