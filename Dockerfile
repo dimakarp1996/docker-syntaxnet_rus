@@ -1,7 +1,7 @@
 FROM ubuntu:15.10
-RUN sudo rm -vf /var/lib/apt/lists/*
+RUN rm -vf /var/lib/apt/lists/*
 
-RUN sudo apt-get update
+RUN apt-get update
 RUN apt-get update && apt-get install -y \
         build-essential \
         curl \
