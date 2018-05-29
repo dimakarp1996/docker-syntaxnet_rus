@@ -8,7 +8,7 @@ ENV LANGUAGE ru_RU.UTF-8
 ENV LANG ru_RU.UTF-8
 ENV LC_ALL ru_RU.UTF-8
 RUN locale-gen ru_RU.UTF-8 && dpkg-reconfigure locales
-ENTRYPOINT /bin/bash
+
 
 RUN apt-get update && apt-get install -y \
         build-essential \
