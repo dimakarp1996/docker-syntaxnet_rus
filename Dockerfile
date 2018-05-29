@@ -1,4 +1,4 @@
-FROM ubuntu:15.10
+FROM ubuntu:16.04
 RUN rm -vf /var/lib/apt/lists/*
 
 RUN apt-get update
