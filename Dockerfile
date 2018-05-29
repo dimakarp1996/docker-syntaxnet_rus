@@ -41,7 +41,7 @@ RUN echo "build --spawn_strategy=standalone --genrule_strategy=standalone" \
 ENV BAZELRC /root/.bazelrc
 
 # Install the most recent bazel release.
-ENV BAZEL_VERSION 0.4.5
+ENV BAZEL_VERSION 0.13.1
 WORKDIR /
 RUN mkdir /bazel && \
     cd /bazel && \
