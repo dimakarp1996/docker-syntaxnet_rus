@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:17.04
 RUN rm -vf /var/lib/apt/lists/*
 
 RUN apt-get update
